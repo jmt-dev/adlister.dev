@@ -1,4 +1,4 @@
-<style>
+
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic);
 
 
@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  min-height: 3000px;
+  min-height: 100%;
   padding-top: 0;
   font-family: 'Open Sans', sans-serif;
   background-image: 
@@ -19,6 +19,9 @@ body {
 }
 .boldItems {
   font-weight: bold;
+}
+.text-center{
+  padding-top: 40px;
 }
 
 .thumbnail {
