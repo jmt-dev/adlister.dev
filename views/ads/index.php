@@ -30,7 +30,7 @@
 				            <img src=<?= "../img/{$ad->id}.jpg" ?> alt="">
 				              	<div class="caption">
 					                <h4><?= $ad->title ?></h4>
-					                <p><?= $ad->description ?></p>
+					                <p><?= $ad->trimDescription(); ?></p>
 					                <p><a href="/ads/show?id=<?= $ad->id; ?>" class="btn btn-info btn-xs" role="button">See more</a></p>
 				            	</div>
 				          	</div>
