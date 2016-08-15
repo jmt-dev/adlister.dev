@@ -1,11 +1,3 @@
-<!--Page for an index of advertisements-->
-<?php
-require_once __DIR__ . "/../partials/navbar.php";
-
-
-
-?>
-
 <div class="container">
 
 	<section id="welcome">

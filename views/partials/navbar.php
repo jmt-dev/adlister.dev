@@ -17,7 +17,6 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="/ads/index">Fads<span class="sr-only">(current)</span></a></li>
-        
         <li><a href="/users/signup" class="boldItems">Sign Up</a></li>
         <li><a href="/users/login" class="boldItems" >Log In</a></li>
       </ul>
