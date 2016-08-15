@@ -2,13 +2,14 @@
 <div class="container">
 	<form method="post" class="form-horizontal">
 		<fieldset>
+			<h1 class="text-center">Create an Ad</h1>
 			<!-- Form Name -->
 			<legend>Create Ad</legend>
 			<!-- Title input-->
 			<div class="form-group">
 			  <label class="col-md-4 control-label" for="textinput">Title</label>  
 			  <div class="col-md-4">
-			  <input name="title" class="form-control input-md" id="textinput" type="text" required placeholder="Title here" value=<?= $title ?>> 
+			  <input name="title" class="form-control input-md" id="textinput" type="text" required placeholder="Title here" value=<?= $ads->title ?>> 
 			  </div>
 			</div>
 
@@ -16,7 +17,7 @@
 			<div class="form-group">
 			  <label class="col-md-4 control-label" for="textinput">Description</label>  
 			  <div class="col-md-4"> 
-			  <textarea name="description" required value=<?= $description ?> placeholder="Ad Description here"></textarea> 
+			  <textarea name="description" required value=<?= $ads->description ?> placeholder="Ad Description here"></textarea> 
 			  </div>
 			</div>
 

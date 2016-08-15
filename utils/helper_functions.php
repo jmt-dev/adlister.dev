@@ -45,16 +45,16 @@ function newUser(){
 
 function createAd(){
     //new object user, passing variables from page into user
-    $user = new Ad();
-    $user->name = Input::get('name');
-    $user->username = Input::get('username');
-    $user->email = Input::get('email');
-    $user->save();
-
-    //getting variable to page controller
-    $data['user->name'] = $user->name;
-    $data['user->username'] = $user->username;
-    $data['user->email'] = $user->email;
+    $ads = new Ad();
+    if($_POST) {
+        $ads->title = Input::get('title');
+        $ads->description = Input::get('description');
+        $ads->user_id = Auth::id();
+        $now = new DateTime('now');
+        $ads->date_created = date_format($now, 'Y-m-d');
+        $ads->save(); 
+    }
+    $data['ads'] = $ads;
     return $data;
 }
 
