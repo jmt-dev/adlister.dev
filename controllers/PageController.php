@@ -47,6 +47,7 @@ function pageController()
             $data['user'] = Auth::user();
             break;
         case '/users/edit':
+            $data['user'] = editUserAccount();
             $main_view = '../views/users/edit.php';
             break;
         case '/users/login':
