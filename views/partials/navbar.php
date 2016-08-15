@@ -1,16 +1,6 @@
-<style>
-#navbar {
-   background-color: #72D79E;
-}
-.boldItems {
-  font-weight: bold;
-}
-  
-</style>
-
 <!--partial view for navbar-->
 
-<nav class="navbar" id="navbar">
+<nav class="navbar navbar-fixed-top" id="navbar">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -29,9 +19,9 @@
         <li class="active"><a href="/ads/index">Fads<span class="sr-only">(current)</span></a></li>
         <li><a href="/users/signup" class="boldItems">Sign Up</a></li>
         <li><a href="/users/login" class="boldItems" >Log In</a></li>
-  
+          
 
-      <form class="navbar-form navbar-left">
+      <form class="navbar-form navbar-right">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>

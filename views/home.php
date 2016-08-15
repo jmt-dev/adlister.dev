@@ -1,8 +1,3 @@
-<?php
-// require_once __DIR__ . "/partials/navbar.php";
-
-?>
-
 <div class="container">
 	<section id="welcome">
 		<div class="row">
