@@ -1,9 +1,7 @@
 <?php
 
 require_once __DIR__ . '/../utils/helper_functions.php';
-require_once __DIR__ . '/../utils/Input.php';
-require_once __DIR__ . '/../models/User.php';
-require_once __DIR__ . '/../models/Ad.php';
+
 
 function pageController()
 {
@@ -40,6 +38,8 @@ function pageController()
             $main_view = '../views/ads/index.php';
             break;
         case '/ads/show':
+            $ad = Ad::find(Input::get('id'));
+            $data['ad'] = $ad;
             $main_view = '../views/ads/show.php';
             break;
         case '/users/account':

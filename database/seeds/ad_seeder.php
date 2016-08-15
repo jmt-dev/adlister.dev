@@ -13,7 +13,7 @@ $ad->save();
 $ad = new Ad;
 $ad->user_id = 2;
 $ad->title = "Y.O.L.O.";
-$ad->description = "An acronym for 'You Only Live Once.' For Milennials, justifying poor lifestyle choices became a lot easier with this 2011 fad.";
+$ad->description = "An acronym for 'You Only Live Once.' For Millennials, justifying poor lifestyle choices became a lot easier with this 2011 fad.";
 $ad->date_created = '2011-01-01';
 $ad->save();  
 
