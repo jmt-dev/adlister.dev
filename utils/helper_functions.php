@@ -78,4 +78,13 @@ function threeAds()
     return [$a, $b, $c];
 }
 
+function editUserAccount() {
+    $user = new User();
+    if (Auth::check()) {
+        $id = Auth::id();
+        $user = User::find($id);
+    }
+    return $user;
+}
+
 ?>
