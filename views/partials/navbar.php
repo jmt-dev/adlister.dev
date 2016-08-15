@@ -17,16 +17,17 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="/ads/index">Fads<span class="sr-only">(current)</span></a></li>
+        
         <li><a href="/users/signup" class="boldItems">Sign Up</a></li>
         <li><a href="/users/login" class="boldItems" >Log In</a></li>
-          
-
+      </ul>
       <form class="navbar-form navbar-right">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
         <button type="submit" class="btn btn-default">Search</button>
       </form>
+    </div><!-- /.navbar-collapse -->
       <!-- <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Link</a></li>
         <li class="dropdown">
@@ -39,7 +40,5 @@
             <li><a href="#">Separated link</a></li>
           </ul>
         </li> -->
-      </ul>
-    </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
