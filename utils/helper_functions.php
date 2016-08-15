@@ -70,4 +70,12 @@ function loginUserWithInputIfExists() {
     }
 }
 
+function threeAds()
+{
+    $a = Ad::find(1); 
+    $b = Ad::find(2);
+    $c = Ad::find(3);
+    return [$a, $b, $c];
+}
+
 ?>
