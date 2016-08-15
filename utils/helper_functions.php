@@ -58,7 +58,6 @@ function createAd(){
     return $data;
 }
 
-
 function loginUserWithInputIfExists() {
     if (!empty($_POST)) {
         $username = Input::has('email_user') ? Input::get('email_user') : '';
@@ -70,3 +69,5 @@ function loginUserWithInputIfExists() {
         }
     }
 }
+
+?>
