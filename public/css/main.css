@@ -1,27 +1,37 @@
-<style>
+
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic);
 
-font-family: 'Open Sans', sans-serif;
+
 
 html {
   font-family: 'Open Sans', sans-serif;
 }
 
 body {
-  min-height: 3000px;
+  min-height: 100%;
   padding-top: 0;
   font-family: 'Open Sans', sans-serif;
   background-image: 
 }
 
+#navbar {
+   background-color: #72D79E;
+}
+.boldItems {
+  font-weight: bold;
+}
+.text-center{
+  padding-top: 40px;
+}
+
 .thumbnail {
-    position: relative;
-    padding: 0px;
-    margin-bottom: 20px;
+  position: relative;
+  padding: 0px;
+  margin-bottom: 20px;
 }
 
 .thumbnail img {
-    width: 100%;
+  width: 100%;
 }
 
 .jumbotron {

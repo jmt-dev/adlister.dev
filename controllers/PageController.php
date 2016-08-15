@@ -18,12 +18,16 @@ function pageController()
     {
         $request = $_SERVER['REQUEST_URI'];
     }
+
+
     // switch that will run functions and setup variables dependent on what route was accessed
     switch ($request) {
         case '/':
+            $data['ads'] = callAllAds();
             $main_view = '../views/home.php';
             break;
         case '/ads/create':
+            $data = createAd();
             $main_view = '../views/ads/create.php';
             break;
         case '/ads/edit':
@@ -40,30 +44,28 @@ function pageController()
             break;
         case '/users/account':
             $main_view = '../views/users/account.php';
+            $data['user'] = Auth::user();
             break;
         case '/users/edit':
             $main_view = '../views/users/edit.php';
             break;
         case '/users/login':
             $main_view = '../views/users/login.php';
+            loginUserWithInputIfExists();
             break;
         case '/users/signup':
+            $data = newUser();  
             $main_view = '../views/users/signup.php';
             break;
+        case '/users/logout':
+            $main_view = '../views/users/logout.php';
+        break;
         default:    // displays 404 if route not specified above
             $main_view = '../views/404.php';
             break;
     }
 
-    function newUser(){
-        $user = new User();
-        $user->name = Input::get('name');
-        $user->username = Input::get('username');
-        $user->email = Input::get('email');
-        $data['user->name'] = $user->name;
-        $data['user->username'] = $user->username;
-        $data['user->email'] = $user->email;
-    }
+    
 
     
 

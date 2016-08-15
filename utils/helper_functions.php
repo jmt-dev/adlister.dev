@@ -26,13 +26,48 @@ function saveUploadedImage($input_name)
     return null;
 }
 
-// function getUserDetails () {
-//     $user = new User();
-//     $user->name = sefl::get();
-//     $user->email = sefl::get();
-//     $user->username = sefl::get();
-// } 
-
 function callAllAds() {
     return Ad::all();
 }
+
+function newUser(){
+
+    if (Input::has('name')) {
+        //new object user, passing variables from page into user
+        $user = new User();
+        $user->name = Input::get('name');
+        $user->username = Input::get('username');
+        $user->email = Input::get('email');
+        $user->password = Input::get('password');
+        $user->save();
+    }
+}
+
+function createAd(){
+    //new object user, passing variables from page into user
+    $user = new Ad();
+    $user->name = Input::get('name');
+    $user->username = Input::get('username');
+    $user->email = Input::get('email');
+    $user->save();
+
+    //getting variable to page controller
+    $data['user->name'] = $user->name;
+    $data['user->username'] = $user->username;
+    $data['user->email'] = $user->email;
+    return $data;
+}
+
+function loginUserWithInputIfExists() {
+    if (!empty($_POST)) {
+        $username = Input::has('email_user') ? Input::get('email_user') : '';
+        $password = Input::has('password') ? Input::get('password') : '';
+        if (Auth::attempt($username, $password)) {
+            session_start();
+            header('Location: /users/account');
+            exit(0);
+        }
+    }
+}
+
+?>
